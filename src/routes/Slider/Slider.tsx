@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getImages } from "../../Api/Api"
+import { getImages } from "../../api/Api"
 import Layout from "../../components/Layout/Layout"
 import { IImage } from "../../Interface/Components"
 import { SliderContext } from "../../hooks/hooks"
@@ -21,7 +21,7 @@ const Slider = ({
 	const [slide, setSlide] = useState(0)
 	const [autoPlay, setAutoPlay] = useState(aPlay)
 	const [orientation, setOrientation] = useState(1)
-	const [touchPosition, setTouchPosition] = useState(null)
+	const [touchPosition, setTouchPosition] = useState<number | null>(null)
 
 	useEffect(() => {
 		const loadData = async () => {
@@ -47,13 +47,13 @@ const Slider = ({
 		setSlide(number % items.length)
 	}
 
-	const handleTouchStart = e => {
+	const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
 		const touchDown = e.touches[0].clientX
 
 		setTouchPosition(touchDown)
 	}
 
-  const handleTouchMove = e => {
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
 		if (touchPosition === null) {
 			return
 		}
