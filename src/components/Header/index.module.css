@@ -1,0 +1,30 @@
+.main {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  margin: auto auto auto 2rem;
+  cursor: pointer;
+}
+
+.showModal {
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: unset;
+  color: rgb(var(--accent));
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.showModal:hover {
+  background-color: rgba(var(--background-secondary),.1);
+  transition: all 0.2s;
+}

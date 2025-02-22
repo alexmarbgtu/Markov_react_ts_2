@@ -1,0 +1,16 @@
+.menu {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menuLink {
+  display: inline-block;
+  color: rgb(var(--accent));
+  padding: 1.125rem;
+  transition: all 0.2s;
+}
+
+.menuLink:hover {
+  background-color: rgba(var(--background-secondary),.1);
+  transition: all 0.2s;
+}

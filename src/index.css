@@ -1,0 +1,22 @@
+@font-face {
+font-family: "Roboto";
+src: local("Roboto"),
+ url("./fonts/Roboto.ttf") format("truetype");
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--accent));
+  background-color: rgba(var(--background-primary), 1);
+  margin: 0;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}

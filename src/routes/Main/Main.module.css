@@ -1,0 +1,44 @@
+.main {
+  color: rgb(var(--accent));
+  /* background-color: rgba(var(--background-primary), 0.9); */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 1rem;
+  color: rgba(var(--accent_secondary), .9);;
+  margin-bottom: 2.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  height: 10rem;
+  background-color: rgba(var(--background-secondary), 0.8);
+  display: flex;
+}
+
+.cardFigure {
+  display: inline-block;
+  margin: 2rem;
+}
+
+.cardMain {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.cardTitle {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: .2rem;
+}
+
+.card p {
+  color: rgba(var(--accent_secondary), .4);
+}

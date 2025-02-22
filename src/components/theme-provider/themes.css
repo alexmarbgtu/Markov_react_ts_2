@@ -1,0 +1,42 @@
+:root {
+  /* light theme tokens */
+  --background-primary-light: 242, 242, 242;
+  --accent-light: 37, 89, 88;
+  --accent-light-secondary: 211, 219, 221;
+
+  /* dark theme tokens */
+  --background-primary-dark: 25, 48, 66;
+  --accent-dark: 90, 182, 204;
+  --accent-dark-secondary: 0, 0, 0;
+}
+
+/* map tokens to proper theme */
+[data-theme='light'] {
+  --background-primary: var(--background-primary-light);
+  --background-secondary: var(--background-primary-dark);
+  --accent: var(--accent-light);
+  --accent_secondary: var(--accent-light-secondary);
+}
+
+[data-theme='dark'] {
+  --background-primary: var(--background-primary-dark);
+  --background-secondary: var(--background-primary-light);
+  --accent: var(--accent-dark);
+  --accent_secondary: var(--accent-dark-secondary);
+}
+
+.theme-switchButton {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: none;
+  border: none;
+  transition: all 0.2s;
+  color: rgb(var(--accent));
+  margin: .5rem 1rem .5rem .5rem;
+}
+
+.theme-switchButton:hover {
+  background-color: rgba(var(--background-secondary),.1);
+  transition: all 0.2s;
+}

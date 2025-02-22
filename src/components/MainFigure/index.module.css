@@ -1,0 +1,18 @@
+.triangle {
+  width: 0;
+  height: 0; 
+  border-left: 28px solid transparent; 
+  border-right: 28px solid transparent; 
+  border-bottom: 50px solid rgb(25, 186, 25);
+
+}
+.containerTriangle {
+  width: 55px;
+  height: 64px;
+}
+
+.containerCircle {
+  width: 55px;
+  height: 55px;
+  /* background-color: red; */
+}
