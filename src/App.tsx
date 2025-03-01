@@ -4,6 +4,7 @@ import Main from './routes/Main/Main'
 import Slider from './routes/Slider/Slider'
 
 import './App.css'
+import PersonalPage from './routes/PersonalPage/PersonalPage'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Main />} />
       <Route path='/slider' element={<Slider />} />
+      <Route path='/user' element={<PersonalPage />} />
     </Routes>
 	)
 }

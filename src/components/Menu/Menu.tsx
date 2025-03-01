@@ -5,7 +5,8 @@ import Styles from './Menu.module.css'
 
 const itemsMenu = [
   { id: uuid4(), title: 'На главную', to: '/' },
-  { id: uuid4(), title: 'Слайдер', to: '/slider' }
+  { id: uuid4(), title: 'Слайдер', to: '/slider' },
+  { id: uuid4(), title: 'тест Redux', to: '/user' }
 
 ]
 
