@@ -2,10 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Main from './routes/Main/Main'
 import Slider from './routes/Slider/Slider'
-
-import './App.css'
 import PersonalPage from './routes/PersonalPage/PersonalPage'
-
 
 function App() {
 	return (

@@ -5,9 +5,11 @@ import RegistrForm2 from '../RegistrForm/RegistrForm2'
 
 import Styles from './index.module.css'
 import cn from 'classnames'
+import AuthForm from '../AuthForm/AuthForm'
 
-const Modal = ({show, setModal}: {show: boolean, setModal: (show: boolean) => void}) => {
-
+const Modal = ({show, setModal, form}: {show: boolean, setModal: (show: boolean) => void, form: string}) => {
+	const registration = (form === 'reg') ? true : false 
+	const auth = (form === 'auth') ? true : false 
   useEffect(() => {
       const handleClick = (e: MouseEvent) => {
         const targetElement = e.target as HTMLElement
@@ -59,7 +61,8 @@ const Modal = ({show, setModal}: {show: boolean, setModal: (show: boolean) => vo
 							transition: { duration: 0.6 },
 						}}
 					>
-						<RegistrForm2 setModal={setModal} />
+						{registration && <RegistrForm2 setModal={setModal} />}
+						{auth && <AuthForm setModal={setModal} />}
 					</motion.div>
 				</motion.div>
 			)}

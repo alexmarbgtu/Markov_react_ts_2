@@ -3,19 +3,15 @@ import Theme from "../theme-provider/theme-provider"
 import { motion } from 'motion/react'
 
 import Styles from './index.module.css'
-import Modal from "../ModalForm/ModalForm"
-import { useState } from "react"
-import Button from "../Button/Button"
 import Menu from "../Menu/Menu"
+import BlockAuth from "../BlockAuth/BlockAuth"
 
 
 const Header = () => {
   const navigate = useNavigate()
-  const [modal, setModal] = useState(false)
-
+	
 	return (
 		<>
-			<Modal show={modal} setModal={setModal} />
 			<header className={Styles.main}>
 				<motion.div
 					className={Styles.logo}
@@ -44,11 +40,9 @@ const Header = () => {
 				>
 					<Menu />
 				</motion.div>
-				<Button
-					className={Styles.showModal}
-					onClick={() => setModal(true)}
-					label={'Регистрация'}
-				/>
+				<div className={Styles.buttonAuth}>
+					<BlockAuth />
+				</div>
 				<motion.div
 					initial={{
 						x: 50,
